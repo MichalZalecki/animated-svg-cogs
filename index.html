@@ -50,11 +50,13 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>
         	var deg = 0;
+        	var rotate_right = $('#cog1 use');
+        	var rotate_left = $('#cog2 use');        	
         	setInterval(function(){
         		if(deg >= 360) deg = 0;
         		deg += 1;
-        		$('#cog1 use').attr('transform', 'rotate('+deg+',32,32)');
-        		$('#cog2 use').attr('transform', 'rotate('+-deg+',32,32)');
+        		rotate_right.attr('transform', 'rotate('+deg+',32,32)');
+        		rotate_left.attr('transform', 'rotate('+-deg+',32,32)');
         	}, 10);
         </script>
     </body>
